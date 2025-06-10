@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChainSentinel.java - Java Dependency Scanner</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChainSentinel.java - Java Dependency Scanner</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <div class="container">
-        <h1>ChainSentinel.java - Java Dependency Scanner</h1>
-        <p>Upload your Java project (JAR, POM, or Gradle file) to scan for vulnerabilities.</p>
+  <div class="container">
+    <header>
+      <h1>ChainSentinel.java</h1>
+      <p class="tagline">Java Dependency Vulnerability Scanner</p>
+      <a href="https://github.com/Karalyze/chainsentinel-java" target="_blank" class="github-link">
+        🔗 View on GitHub
+      </a>
+    </header>
 
-        <form id="uploadForm">
-            <input type="file" id="fileInput" name="file" accept=".jar, .pom, .gradle">
-            <button type="submit">Scan Now</button>
+    <main>
+      <section class="upload-section">
+        <p>Upload your Java project file (JAR, POM, or Gradle) to scan for known vulnerabilities.</p>
+        <form id="uploadForm" enctype="multipart/form-data">
+          <input type="file" id="fileInput" name="file" accept=".jar,.pom,.gradle" required />
+          <button type="submit">Scan Now</button>
         </form>
+      </section>
 
-        <div id="result">
-            <p>Your PDF report will appear here after scanning.</p>
-        </div>
-    </div>
+      <section id="result" class="result-section">
+        <h2>Scan Result</h2>
+        <p>Your PDF vulnerability report will appear here after scanning.</p>
+      </section>
+    </main>
 
-    <script src="scripts.js"></script>
+    <footer>
+      <p>&copy; 2025 ChainSentinel. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
+
